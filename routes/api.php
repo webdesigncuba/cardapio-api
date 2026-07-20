@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\V1\Auth\LoginController;
 use App\Http\Controllers\Api\V1\Auth\LogoutController;
 use App\Http\Controllers\Api\V1\Auth\RegisterController;
+use App\Http\Controllers\Api\V1\Restaurants\RestaurantController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1')->group(function () {
@@ -15,4 +16,7 @@ Route::prefix('v1')->group(function () {
     Route::post('auth/logout', LogoutController::class)
         ->middleware('auth:sanctum')
         ->name('auth.logout');
+
+    Route::apiResource('restaurants', RestaurantController::class)
+        ->middleware('auth:sanctum');
 });
