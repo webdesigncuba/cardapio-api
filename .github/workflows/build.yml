@@ -20,5 +20,5 @@ jobs:
           SONAR_HOST_URL: https://sonarcloud.io
         with:
           args: >
-            -Dsonar.projectKey=webdesigncuba_cardapio-api
-            -Dsonar.organization=webdesigncuba
+            -sonar.projectKey=webdesigncuba_cardapio-api
+            -sonar.organization=webdesigncuba
