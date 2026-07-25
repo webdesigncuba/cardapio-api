@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Api\V1\Categories;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\V1\Category\CategoryRequest;
-use App\Models\Category;
+// Removed direct Category import to avoid undefined type issues; using relations to fetch models.
 use App\Models\Restaurant;
 use Illuminate\Http\JsonResponse;
 
@@ -17,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index(Restaurant $restaurant): JsonResponse
     {
-        $categories = Category::where('restaurant_id', $restaurant->id)
+        $categories = $restaurant->categories()
             ->orderBy('sort_order')
             ->latest('id')
             ->get();
@@ -34,9 +34,8 @@ class CategoryController extends Controller
     {
         $validated = $request->validated();
 
-        $category = Category::create([
+        $category = $restaurant->categories()->create([
             ...$validated,
-            'restaurant_id' => $restaurant->id,
             'slug' => $validated['slug'] ?? str($validated['name'])->slug()->toString(),
         ]);
 
@@ -49,9 +48,9 @@ class CategoryController extends Controller
     /**
      * Display the specified category.
      */
-    public function show(Restaurant $restaurant, Category $category): JsonResponse
+    public function show(Restaurant $restaurant, $categoryId): JsonResponse
     {
-        abort_if($category->restaurant_id !== $restaurant->id, 404);
+        $category = $restaurant->categories()->findOrFail($categoryId);
 
         return response()->json([
             'data' => $category,
@@ -61,9 +60,9 @@ class CategoryController extends Controller
     /**
      * Update the specified category.
      */
-    public function update(CategoryRequest $request, Restaurant $restaurant, Category $category): JsonResponse
+    public function update(CategoryRequest $request, Restaurant $restaurant, $categoryId): JsonResponse
     {
-        abort_if($category->restaurant_id !== $restaurant->id, 404);
+        $category = $restaurant->categories()->findOrFail($categoryId);
 
         $validated = $request->validated();
 
@@ -83,9 +82,9 @@ class CategoryController extends Controller
     /**
      * Remove the specified category from storage.
      */
-    public function destroy(Restaurant $restaurant, Category $category): JsonResponse
+    public function destroy(Restaurant $restaurant, $categoryId): JsonResponse
     {
-        abort_if($category->restaurant_id !== $restaurant->id, 404);
+        $category = $restaurant->categories()->findOrFail($categoryId);
 
         $category->delete();
 
