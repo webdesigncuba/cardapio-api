@@ -17,7 +17,7 @@ class ClientController extends Controller
      */
     public function index(Restaurant $restaurant): JsonResponse
     {
-        $clients = Client::where('restaurant_id', $restaurant->id)
+    $clients = Client::where('restaurant_id', $restaurant->id)
             ->latest()
             ->get();
 
@@ -59,6 +59,7 @@ class ClientController extends Controller
      */
     public function update(ClientRequest $request, Restaurant $restaurant, Client $client): JsonResponse
     {
+
         $this->ensureBelongsToRestaurant($restaurant, $client);
 
         $client->update($request->validated());
@@ -89,5 +90,15 @@ class ClientController extends Controller
     private function ensureBelongsToRestaurant(Restaurant $restaurant, Client $client): void
     {
         abort_if($client->restaurant_id !== $restaurant->id, 404);
+    }
+
+    public function getRestaurant($id)
+    {
+        $restaurant = Restaurant::find($id);
+        if(!$restaurant){
+            return response()->json([
+                'message' => "Restaurant no encontrado",
+            ], 404);
+        }
     }
 }
