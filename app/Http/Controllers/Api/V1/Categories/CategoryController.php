@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Api\V1\Categories;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\V1\Category\CategoryRequest;
-// Removed direct Category import to avoid undefined type issues; using relations to fetch models.
+use App\Models\Category;
 use App\Models\Restaurant;
 use Illuminate\Http\JsonResponse;
 
@@ -48,9 +48,9 @@ class CategoryController extends Controller
     /**
      * Display the specified category.
      */
-    public function show(Restaurant $restaurant, $categoryId): JsonResponse
+    public function show(Restaurant $restaurant, Category $category): JsonResponse
     {
-        $category = $restaurant->categories()->findOrFail($categoryId);
+        abort_if($category->restaurant_id !== $restaurant->id, 404);
 
         return response()->json([
             'data' => $category,
@@ -60,9 +60,9 @@ class CategoryController extends Controller
     /**
      * Update the specified category.
      */
-    public function update(CategoryRequest $request, Restaurant $restaurant, $categoryId): JsonResponse
+    public function update(CategoryRequest $request, Restaurant $restaurant, Category $category): JsonResponse
     {
-        $category = $restaurant->categories()->findOrFail($categoryId);
+        abort_if($category->restaurant_id !== $restaurant->id, 404);
 
         $validated = $request->validated();
 
@@ -82,9 +82,9 @@ class CategoryController extends Controller
     /**
      * Remove the specified category from storage.
      */
-    public function destroy(Restaurant $restaurant, $categoryId): JsonResponse
+    public function destroy(Restaurant $restaurant, Category $category): JsonResponse
     {
-        $category = $restaurant->categories()->findOrFail($categoryId);
+        abort_if($category->restaurant_id !== $restaurant->id, 404);
 
         $category->delete();
 
