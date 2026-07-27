@@ -9,6 +9,7 @@ use App\Models\Tenant;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class RegisterController extends Controller
@@ -30,7 +31,7 @@ class RegisterController extends Controller
                 'tenant_id' => $tenant->id,
                 'name' => $validated['name'],
                 'email' => $validated['email'],
-                'password' => $validated['password'],
+                'password' => Hash::make($validated['password']),
                 'role' => 'owner',
             ]);
 
@@ -40,9 +41,7 @@ class RegisterController extends Controller
                 'slug' => $slug,
             ]);
 
-            $token = $user->createToken('auth-token')->plainTextToken;
-
-            return compact('user', 'tenant', 'restaurant', 'token');
+            return compact('user', 'tenant', 'restaurant');
         });
 
         return response()->json([
@@ -62,7 +61,6 @@ class RegisterController extends Controller
                     'id' => $result['tenant']->id,
                     'name' => $result['tenant']->name,
                 ],
-                'token' => $result['token'],
             ],
             'message' => 'Registro exitoso. Bienvenido a Cardapio.',
         ], 201);
