@@ -1,24 +1,23 @@
-name: Release Changelog
+name: Release
 
 on:
   push:
     tags:
-      - 'v*.*.*'   # Se activa al hacer push de un tag como v0.0.1
+      - 'v*'
 
 jobs:
-  changelog:
+  release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v7
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Generar changelog
-        id: changelog
-        uses: mikepenz/release-changelog-builder-action@v5 # SHA de la acción
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
         with:
-          configuration: ".github/changelog-config.json"
-
-      - name: Crear Release en GitHub
-        uses: softprops/action-gh-release@v2 # SHA de la acción
-        with:
-          body: ${{ steps.changelog.outputs.changelog }}
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            Changelog automático para ${{ github.ref_name }}
