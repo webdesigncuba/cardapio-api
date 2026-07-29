@@ -1,33 +1,72 @@
+"php -r '
+\$content = <<<\"MD\"
 # Cardápio API
 
-> **Multi-tenant restaurant management API** — Register, manage restaurants, and build your digital menu platform.
+> **Multi-tenant restaurant management API** — Register, manage restaurants, categories, products, clients, and orders for your digital menu platform.
 
-Cardápio is a **RESTful API** built with Laravel 13 that allows restaurant owners to register their business, manage their profile, and prepare for digital menu and order management. The system uses a **multi-tenant architecture** where each restaurant belongs to a tenant, and each owner manages their own restaurants.
+Cardápio is a **RESTful API** built with Laravel 13 that allows restaurant owners to register their business, manage their menu, clients, and orders. The system uses a **multi-tenant architecture** where each restaurant belongs to a tenant.
 
 ---
 
-## Features
+## Features — v0.0.1
 
-### ✅ Implemented
+### Auth
 
-- **Auth**
-  - `POST /api/v1/auth/register` — Register owner + tenant + restaurant in one step
-  - `POST /api/v1/auth/login` — Authenticate and receive API token
-  - `POST /api/v1/auth/logout` — Revoke all active tokens
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| POST | /api/v1/auth/register | ❌ | Register owner + tenant + restaurant |
+| POST | /api/v1/auth/login | ❌ | Authenticate and receive API token |
+| POST | /api/v1/auth/logout | ✅ | Revoke all active tokens |
 
-- **Restaurants (CRUD)**
-  - `GET /api/v1/restaurants` — List restaurants from your tenant
-  - `POST /api/v1/restaurants` — Create a new restaurant (slug auto-generated)
-  - `GET /api/v1/restaurants/{restaurant}` — Show restaurant details
-  - `PUT/PATCH /api/v1/restaurants/{restaurant}` — Update restaurant
-  - `DELETE /api/v1/restaurants/{restaurant}` — Delete restaurant
+### Restaurants (CRUD)
 
-### 🔜 Upcoming
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/restaurants | List restaurants |
+| POST | /api/v1/restaurants | Create a restaurant |
+| GET | /api/v1/restaurants/{restaurant} | Show restaurant |
+| PUT/PATCH | /api/v1/restaurants/{restaurant} | Update restaurant |
+| DELETE | /api/v1/restaurants/{restaurant} | Delete restaurant |
 
-- Menu management (categories, products, modifiers)
-- Order management (cart, checkout, status tracking)
-- Staff roles and permissions
-- Tenant/business settings
+### Categories (CRUD)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/restaurants/{restaurant}/categories | List categories |
+| POST | /api/v1/restaurants/{restaurant}/categories | Create a category |
+| GET | /api/v1/restaurants/{restaurant}/categories/{category} | Show category |
+| PUT/PATCH | /api/v1/restaurants/{restaurant}/categories/{category} | Update category |
+| DELETE | /api/v1/restaurants/{restaurant}/categories/{category} | Delete category |
+
+### Products (CRUD)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/restaurants/{restaurant}/products | List products |
+| POST | /api/v1/restaurants/{restaurant}/products | Create a product |
+| GET | /api/v1/restaurants/{restaurant}/products/{product} | Show product |
+| PUT/PATCH | /api/v1/restaurants/{restaurant}/products/{product} | Update product |
+| DELETE | /api/v1/restaurants/{restaurant}/products/{product} | Delete product |
+
+### Clients (CRUD)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/restaurants/{restaurant}/clients | List clients |
+| POST | /api/v1/restaurants/{restaurant}/clients | Create a client |
+| GET | /api/v1/restaurants/{restaurant}/clients/{client} | Show client |
+| PUT/PATCH | /api/v1/restaurants/{restaurant}/clients/{client} | Update client |
+| DELETE | /api/v1/restaurants/{restaurant}/clients/{client} | Delete client |
+
+### Orders (CRUD + Items + Modifiers)
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/v1/restaurants/{restaurant}/orders | List orders |
+| POST | /api/v1/restaurants/{restaurant}/orders | Create order with items and modifiers |
+| GET | /api/v1/restaurants/{restaurant}/orders/{order} | Show order |
+| PUT/PATCH | /api/v1/restaurants/{restaurant}/orders/{order} | Update order |
+| DELETE | /api/v1/restaurants/{restaurant}/orders/{order} | Delete order |
 
 ---
 
@@ -35,12 +74,12 @@ Cardápio is a **RESTful API** built with Laravel 13 that allows restaurant owne
 
 | Layer | Technology |
 |-------|-----------|
-| **Framework** | Laravel 13 |
-| **PHP** | 8.3 |
-| **Database** | MySQL (production), SQLite (testing) |
-| **Auth** | Laravel Sanctum (token-based) |
-| **Testing** | PHPUnit 12 |
-| **Code Style** | Laravel Pint |
+| Framework | Laravel 13 |
+| PHP | 8.4 |
+| Database | MySQL (production), SQLite (testing) |
+| Auth | Laravel Sanctum (token-based) |
+| Testing | PHPUnit 12 |
+| Code Style | Laravel Pint |
 
 ---
 
@@ -49,238 +88,104 @@ Cardápio is a **RESTful API** built with Laravel 13 that allows restaurant owne
 - PHP 8.3+
 - Composer 2
 - MySQL 8+ (or MariaDB 10+)
+- SQLite 3 (for testing)
 
 ---
 
 ## Installation
 
 ```bash
-# 1. Clone the repository
 git clone <repository-url> cardapio-api
 cd cardapio-api
-
-# 2. Install PHP dependencies
 composer install
-
-# 3. Create environment file
 cp .env.example .env
-
-# 4. Configure database in .env
-#    DB_CONNECTION=mysql
-#    DB_HOST=127.0.0.1
-#    DB_PORT=3306
-#    DB_DATABASE=cardapio_api
-#    DB_USERNAME=root
-#    DB_PASSWORD=
-
-# 5. Generate application key
+# configure database in .env
 php artisan key:generate
-
-# 6. Create database and run migrations
 php artisan migrate
-
-# 7. Install Sanctum
 php artisan install:api
-
-# 8. Start the development server
 php artisan serve
-```
-
-The API runs at `http://localhost:8000/api/v1/...`
-
----
-
-## Quick Start
-
-```bash
-composer run setup
 ```
 
 ---
 
 ## API Reference
 
-### Authentication
-
-All auth endpoints are **public** (no token required), except logout.
-
-#### Register
+### Register
 
 ```http
 POST /api/v1/auth/register
 Content-Type: application/json
 
 {
-    "name": "María García",
-    "email": "maria@emporio.com",
-    "password": "SecurePass123!",
-    "password_confirmation": "SecurePass123!",
-    "restaurant_name": "Emporio de María"
+    \"name\": \"María García\",
+    \"email\": \"maria@emporio.com\",
+    \"password\": \"SecurePass123!\",
+    \"password_confirmation\": \"SecurePass123!\",
+    \"restaurant_name\": \"Emporio de María\"
 }
 ```
 
-**Response** `201 Created`
+Response 201:
 
 ```json
 {
-    "data": {
-        "user": {
-            "id": 1,
-            "name": "María García",
-            "email": "maria@emporio.com",
-            "role": "owner"
-        },
-        "restaurant": {
-            "id": 1,
-            "name": "Emporio de María",
-            "slug": "emporio-de-maria"
-        },
-        "tenant": {
-            "id": 1,
-            "name": "Emporio de María"
-        },
-        "token": "1|abc123..."
+    \"data\": {
+        \"user\": {\"id\": 1, \"name\": \"María García\", \"email\": \"maria@emporio.com\", \"role\": \"owner\"},
+        \"restaurant\": {\"id\": 1, \"name\": \"Emporio de María\", \"slug\": \"emporio-de-maria\"},
+        \"tenant\": {\"id\": 1, \"name\": \"Emporio de María\"},
+        \"token\": \"1|abc123...\"
     },
-    "message": "Registro exitoso. Bienvenido a Cardapio."
+    \"message\": \"Registro exitoso. Bienvenido a Cardapio.\"
 }
 ```
 
-#### Login
+### Login
 
 ```http
 POST /api/v1/auth/login
 Content-Type: application/json
 
 {
-    "email": "maria@emporio.com",
-    "password": "SecurePass123!"
+    \"email\": \"maria@emporio.com\",
+    \"password\": \"SecurePass123!\"
 }
 ```
 
-**Response** `200 OK`
+Response 200:
 
 ```json
 {
-    "data": {
-        "user": {
-            "id": 1,
-            "name": "María García",
-            "email": "maria@emporio.com",
-            "role": "owner"
-        },
-        "token": "2|xyz789..."
+    \"data\": {
+        \"user\": {\"id\": 1, \"name\": \"María García\", \"email\": \"maria@emporio.com\", \"role\": \"owner\"},
+        \"token\": \"2|xyz789...\"
     }
 }
 ```
 
-> Previous tokens are automatically revoked on each login.
-
-#### Logout
+### Logout
 
 ```http
 POST /api/v1/auth/logout
 Authorization: Bearer {token}
 ```
 
-**Response** `200 OK`
+Response 200:
 
 ```json
-{
-    "message": "Logged out successfully."
-}
-```
-
-### Restaurants
-
-All restaurant endpoints require **authentication** (`Authorization: Bearer {token}`).
-
-#### List Restaurants
-
-```http
-GET /api/v1/restaurants
-Authorization: Bearer {token}
-```
-
-#### Create Restaurant
-
-```http
-POST /api/v1/restaurants
-Authorization: Bearer {token}
-Content-Type: application/json
-
-{
-    "name": "La Casa de las Empanadas"
-}
-```
-
-#### Show / Update / Delete Restaurant
-
-```http
-GET    /api/v1/restaurants/{restaurant}
-PUT    /api/v1/restaurants/{restaurant}
-DELETE /api/v1/restaurants/{restaurant}
+{\"message\": \"Logged out successfully.\"}
 ```
 
 ---
 
-## Architecture
-
-### Directory Structure
-
-```
-app/
-├── Domains/              ← Business logic (Actions, DTOs)
-├── Http/
-│   ├── Controllers/
-│   │   └── Api/V1/
-│   │       ├── Auth/
-│   │       └── Restaurants/
-│   └── Requests/
-│       └── Api/V1/
-│           ├── Auth/
-│           └── Restaurant/
-├── Models/
-│   ├── User.php
-│   ├── Tenant.php
-│   └── Restaurant.php
-```
-
-### Multi-tenant Model
-
-```
-Tenant (1) → has many Users
-           → has many Restaurants
-```
-
-Each owner registers and automatically creates their tenant and first restaurant. All subsequent resources are scoped to the owner's tenant.
-
-### API Versioning
-
-Endpoints are versioned via URL prefix: `/api/v1/...`
-
----
-
-## Development
-
-### Running Tests
+## Testing
 
 ```bash
-# Run all tests
 php artisan test
-
-# Run specific test suite
-php artisan test --filter=RegisterTest
-php artisan test --filter=LoginTest
-php artisan test --filter=LogoutTest
-php artisan test --filter=RestaurantTest
-
-# Run with compact output
+php artisan test --filter=OrderTest
 php artisan test --compact
 ```
 
-Tests use **SQLite in-memory** database — no external database required.
-
-Current test coverage: **32 tests, 155 assertions** ✅
+Current coverage: **72 tests, 282 assertions** ✅
 
 ### Code Style
 
@@ -288,39 +193,30 @@ Current test coverage: **32 tests, 155 assertions** ✅
 vendor/bin/pint
 ```
 
-### Development Server
-
-```bash
-composer run dev
-```
-
 ---
 
-## Environment Variables
+## Roadmap
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `APP_NAME` | Cardapio API | Application name |
-| `APP_ENV` | local | Environment |
-| `APP_URL` | http://localhost | Application URL |
-| `DB_CONNECTION` | mysql | Database driver |
-| `DB_HOST` | 127.0.0.1 | Database host |
-| `DB_PORT` | 3306 | Database port |
-| `DB_DATABASE` | cardapio_api | Database name |
-| `DB_USERNAME` | root | Database user |
-| `DB_PASSWORD` | | Database password |
+### v0.0.1 ✅ (Current)
+- Auth (register, login, logout)
+- Restaurants CRUD
+- Categories CRUD
+- Products CRUD
+- Clients CRUD
+- Orders CRUD with items and modifiers
 
----
-
-## Contributing
-
-1. Write tests before implementing new features (TDD)
-2. Follow Laravel conventions and PSR-12 standards
-3. Run `vendor/bin/pint` before committing
-4. Ensure all tests pass: `php artisan test`
+### v0.1.0 🔜
+- Modifiers CRUD
+- Pagination
+- Database seeders
+- API Resource classes
+- Rate limiting
 
 ---
 
 ## License
 
-Cardápio API is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Cardapio API is open-sourced software licensed under the MIT license.
+MD;
+
+f
