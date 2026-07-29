@@ -27,7 +27,7 @@ jobs:
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - name: Publicar cobertura en Codecov
-        uses: codecov/codecov-action@845f3f8a3d2c7b9e1f0a2d3c4b5a6d7e8f9a0b1c # v4.0.1
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml
