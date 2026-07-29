@@ -6,7 +6,6 @@ use Database\Factories\OrderItemModifierFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use App\Models\ModifierOption;
 
 class OrderItemModifier extends Model
 {
@@ -33,6 +32,6 @@ class OrderItemModifier extends Model
 
     public function modifierOption(): BelongsTo
     {
-        return $this->belongsTo(ModifierOption::class);
+        return $this->belongsTo('App\\Models\\ModifierOption');
     }
 }
