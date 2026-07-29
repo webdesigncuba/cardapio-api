@@ -23,7 +23,8 @@ jobs:
         run: composer install --no-interaction --prefer-dist
 
       - name: Ejecutar PHPStan
-        run: ./vendor/bin/phpstan analyse --level=1 app/
+        run: ./vendor/bin/phpstan analyse --configuration=phpstan.neon.dist app/
+
 
       - name: Ejecutar PHPCS
         run: ./vendor/bin/phpcs --standard=PSR12 app/
