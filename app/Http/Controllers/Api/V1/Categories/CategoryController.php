@@ -22,7 +22,7 @@ class CategoryController extends Controller
             ->latest('id')
             ->get();
 
-        if($categories->isEmpty()){
+        if ($categories->isEmpty()) {
             return response()->json([
                 'message' => 'Not data found'
             ]);

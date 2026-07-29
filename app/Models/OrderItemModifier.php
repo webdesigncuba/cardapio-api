@@ -32,6 +32,6 @@ class OrderItemModifier extends Model
 
     public function modifierOption(): BelongsTo
     {
-        return $this->belongsTo(ModifierOption::class);
+        return $this->belongsTo('App\\Models\\ModifierOption');
     }
 }

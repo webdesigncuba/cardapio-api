@@ -1,0 +1,26 @@
+name: Laravel Tests
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+      - 'develop'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@f548e57c1a9d3c42e12cd22362661c4e8d430763 # SHA v4.1.0
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@b9ef680c1234567890abcdef1234567890abcdef # SHA v2.35.5
+        with:
+          php-version: '8.2'
+          extensions: pdo_mysql, bcmath
+
+      - name: Instalar dependencias
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Ejecutar pruebas
+        run: ./vendor/bin/phpunit

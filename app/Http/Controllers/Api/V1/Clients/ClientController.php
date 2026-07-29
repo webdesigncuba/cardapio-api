@@ -17,7 +17,7 @@ class ClientController extends Controller
      */
     public function index(Restaurant $restaurant): JsonResponse
     {
-    $clients = Client::where('restaurant_id', $restaurant->id)
+        $clients = Client::where('restaurant_id', $restaurant->id)
             ->latest()
             ->get();
 
@@ -95,7 +95,7 @@ class ClientController extends Controller
     public function getRestaurant($id)
     {
         $restaurant = Restaurant::find($id);
-        if(!$restaurant){
+        if (!$restaurant) {
             return response()->json([
                 'message' => "Restaurant no encontrado",
             ], 404);
