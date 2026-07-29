@@ -1,0 +1,29 @@
+name: Laravel Lint & Static Analysis
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - release/*
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@f548e57c1a9d3c42e12cd22362661c4e8d430763
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@b9ef680c1234567890abcdef1234567890abcdef
+        with:
+          php-version: '8.2'
+
+      - name: Instalar dependencias
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Ejecutar PHPStan
+        run: ./vendor/bin/phpstan analyse --level=max app/
+
+      - name: Ejecutar PHPCS
+        run: ./vendor/bin/phpcs --standard=PSR12 app/
