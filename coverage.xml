@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1785354874">
+  <project timestamp="1785354874" name="Clover Coverage">
+    <package name="App\Exceptions">
+      <file name="/var/www/html/cardapio-api/app/Exceptions/Handler.php">
+        <class name="App\Exceptions\Handler" namespace="App\Exceptions">
+          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="unauthenticated" visibility="protected" complexity="1" crap="2" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="23" type="method" name="register" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <metrics loc="33" ncloc="30" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Auth">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Auth/LoginController.php">
+        <class name="App\Http\Controllers\Api\V1\Auth\LoginController" namespace="App\Http\Controllers\Api\V1\Auth">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="20" coveredelements="20"/>
+        </class>
+        <line num="18" type="method" name="__invoke" visibility="public" complexity="3" crap="3" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="23" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <metrics loc="49" ncloc="44" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="19" coveredstatements="19" elements="20" coveredelements="20"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Auth/LogoutController.php">
+        <class name="App\Http\Controllers\Api\V1\Auth\LogoutController" namespace="App\Http\Controllers\Api\V1\Auth">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="16" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="18" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="3"/>
+        <metrics loc="25" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Auth/RegisterController.php">
+        <class name="App\Http\Controllers\Api\V1\Auth\RegisterController" namespace="App\Http\Controllers\Api\V1\Auth">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="44" elements="45" coveredelements="45"/>
+        </class>
+        <line num="17" type="method" name="__invoke" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="57" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="63" type="stmt" count="1"/>
+        <line num="64" type="stmt" count="1"/>
+        <line num="65" type="stmt" count="1"/>
+        <line num="66" type="stmt" count="1"/>
+        <line num="67" type="stmt" count="1"/>
+        <line num="68" type="stmt" count="1"/>
+        <line num="69" type="stmt" count="1"/>
+        <metrics loc="72" ncloc="72" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="44" coveredstatements="44" elements="45" coveredelements="45"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Categories">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Categories/CategoryController.php">
+        <class name="App\Http\Controllers\Api\V1\Categories\CategoryController" namespace="App\Http\Controllers\Api\V1\Categories">
+          <metrics complexity="7" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="38" elements="46" coveredelements="42"/>
+        </class>
+        <line num="18" type="method" name="index" visibility="public" complexity="2" crap="2.08" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="38" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="56" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="1"/>
+        <line num="62" type="stmt" count="1"/>
+        <line num="68" type="method" name="update" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="2"/>
+        <line num="76" type="stmt" count="2"/>
+        <line num="77" type="stmt" count="1"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="90" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="92" type="stmt" count="2"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <line num="97" type="stmt" count="1"/>
+        <line num="98" type="stmt" count="1"/>
+        <metrics loc="101" ncloc="86" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="41" coveredstatements="38" elements="46" coveredelements="42"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Clients">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Clients/ClientController.php">
+        <class name="App\Http\Controllers\Api\V1\Clients\ClientController" namespace="App\Http\Controllers\Api\V1\Clients">
+          <metrics complexity="8" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="30" elements="42" coveredelements="36"/>
+        </class>
+        <line num="18" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="32" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="48" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="60" type="method" name="update" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="63" type="stmt" count="3"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="69" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="76" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="80" type="stmt" count="1"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="90" type="method" name="ensureBelongsToRestaurant" visibility="private" complexity="1" crap="1" count="7"/>
+        <line num="92" type="stmt" count="7"/>
+        <line num="95" type="method" name="getRestaurant" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="97" type="stmt" count="0"/>
+        <line num="98" type="stmt" count="0"/>
+        <line num="99" type="stmt" count="0"/>
+        <line num="100" type="stmt" count="0"/>
+        <line num="101" type="stmt" count="0"/>
+        <metrics loc="105" ncloc="87" classes="1" methods="7" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="30" elements="42" coveredelements="36"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Order">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Order/OrderController.php">
+        <class name="App\Http\Controllers\Api\V1\Order\OrderController" namespace="App\Http\Controllers\Api\V1\Order">
+          <metrics complexity="12" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="42" elements="59" coveredelements="45"/>
+        </class>
+        <line num="18" type="method" name="index" visibility="public" complexity="2" crap="2.08" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="39" type="method" name="store" visibility="public" complexity="5" crap="5.26" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="1"/>
+        <line num="50" type="stmt" count="1"/>
+        <line num="51" type="stmt" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="54" type="stmt" count="1"/>
+        <line num="55" type="stmt" count="1"/>
+        <line num="56" type="stmt" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="1"/>
+        <line num="70" type="stmt" count="1"/>
+        <line num="71" type="stmt" count="1"/>
+        <line num="72" type="stmt" count="1"/>
+        <line num="78" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="80" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="1"/>
+        <line num="83" type="stmt" count="1"/>
+        <line num="84" type="stmt" count="1"/>
+        <line num="90" type="method" name="update" visibility="public" complexity="1" crap="1" count="3"/>
+        <line num="92" type="stmt" count="3"/>
+        <line num="94" type="stmt" count="2"/>
+        <line num="96" type="stmt" count="2"/>
+        <line num="98" type="stmt" count="2"/>
+        <line num="99" type="stmt" count="2"/>
+        <line num="100" type="stmt" count="2"/>
+        <line num="101" type="stmt" count="2"/>
+        <line num="107" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="109" type="stmt" count="2"/>
+        <line num="111" type="stmt" count="1"/>
+        <line num="113" type="stmt" count="1"/>
+        <line num="114" type="stmt" count="1"/>
+        <line num="115" type="stmt" count="1"/>
+        <line num="121" type="method" name="generateOrderNumber" visibility="private" complexity="2" crap="6" count="0"/>
+        <line num="123" type="stmt" count="0"/>
+        <line num="124" type="stmt" count="0"/>
+        <line num="126" type="stmt" count="0"/>
+        <metrics loc="129" ncloc="111" classes="1" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="53" coveredstatements="42" elements="59" coveredelements="45"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Products">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Products/ProductController.php">
+        <class name="App\Http\Controllers\Api\V1\Products\ProductController" namespace="App\Http\Controllers\Api\V1\Products">
+          <metrics complexity="6" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="37" coveredelements="37"/>
+        </class>
+        <line num="15" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="17" type="stmt" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="29" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="31" type="stmt" count="1"/>
+        <line num="33" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="1"/>
+        <line num="35" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="44" type="method" name="show" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="46" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="1"/>
+        <line num="51" type="method" name="update" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="53" type="stmt" count="3"/>
+        <line num="55" type="stmt" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="64" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="2"/>
+        <line num="66" type="stmt" count="2"/>
+        <line num="67" type="stmt" count="2"/>
+        <line num="70" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="74" type="stmt" count="1"/>
+        <line num="76" type="stmt" count="1"/>
+        <metrics loc="79" ncloc="76" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="32" elements="37" coveredelements="37"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers\Api\V1\Restaurants">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Api/V1/Restaurants/RestaurantController.php">
+        <class name="App\Http\Controllers\Api\V1\Restaurants\RestaurantController" namespace="App\Http\Controllers\Api\V1\Restaurants">
+          <metrics complexity="6" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="42" elements="47" coveredelements="47"/>
+        </class>
+        <line num="19" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="33" type="method" name="store" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="47" type="stmt" count="2"/>
+        <line num="48" type="stmt" count="2"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="56" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="58" type="stmt" count="1"/>
+        <line num="59" type="stmt" count="1"/>
+        <line num="60" type="stmt" count="1"/>
+        <line num="66" type="method" name="update" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="68" type="stmt" count="2"/>
+        <line num="70" type="stmt" count="2"/>
+        <line num="71" type="stmt" count="2"/>
+        <line num="72" type="stmt" count="2"/>
+        <line num="73" type="stmt" count="1"/>
+        <line num="74" type="stmt" count="2"/>
+        <line num="75" type="stmt" count="2"/>
+        <line num="76" type="stmt" count="2"/>
+        <line num="77" type="stmt" count="2"/>
+        <line num="78" type="stmt" count="2"/>
+        <line num="79" type="stmt" count="2"/>
+        <line num="81" type="stmt" count="2"/>
+        <line num="82" type="stmt" count="2"/>
+        <line num="83" type="stmt" count="2"/>
+        <line num="84" type="stmt" count="2"/>
+        <line num="90" type="method" name="destroy" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="92" type="stmt" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="95" type="stmt" count="1"/>
+        <line num="96" type="stmt" count="1"/>
+        <metrics loc="99" ncloc="84" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="42" elements="47" coveredelements="47"/>
+      </file>
+    </package>
+    <package name="App\Http\Controllers">
+      <file name="/var/www/html/cardapio-api/app/Http/Controllers/Controller.php">
+        <class name="App\Http\Controllers\Controller" namespace="App\Http\Controllers">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Auth">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Auth/LoginRequest.php">
+        <class name="App\Http\Requests\Api\V1\Auth\LoginRequest" namespace="App\Http\Requests\Api\V1\Auth">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+        </class>
+        <line num="13" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="15" type="stmt" count="7"/>
+        <line num="23" type="method" name="rules" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="31" type="method" name="messages" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="36" type="stmt" count="7"/>
+        <line num="37" type="stmt" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <metrics loc="41" ncloc="33" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="14" coveredelements="14"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Auth/RegisterRequest.php">
+        <class name="App\Http\Requests\Api\V1\Auth\RegisterRequest" namespace="App\Http\Requests\Api\V1\Auth">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+        </class>
+        <line num="9" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="11" type="stmt" count="7"/>
+        <line num="14" type="method" name="rules" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="16" type="stmt" count="7"/>
+        <line num="17" type="stmt" count="7"/>
+        <line num="18" type="stmt" count="7"/>
+        <line num="19" type="stmt" count="7"/>
+        <line num="20" type="stmt" count="7"/>
+        <line num="21" type="stmt" count="7"/>
+        <line num="24" type="method" name="messages" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <metrics loc="35" ncloc="35" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="13" elements="16" coveredelements="16"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Category">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Category/CategoryRequest.php">
+        <class name="App\Http\Requests\Api\V1\Category\CategoryRequest" namespace="App\Http\Requests\Api\V1\Category">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
+        </class>
+        <line num="13" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="15" type="stmt" count="5"/>
+        <line num="18" type="method" name="rules" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="40" type="stmt" count="5"/>
+        <metrics loc="43" ncloc="42" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="20" coveredelements="20"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Clients">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Clients/ClientRequest.php">
+        <class name="App\Http\Requests\Api\V1\Clients\ClientRequest" namespace="App\Http\Requests\Api\V1\Clients">
+          <metrics complexity="8" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
+        </class>
+        <line num="11" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="13" type="stmt" count="5"/>
+        <line num="16" type="method" name="rules" visibility="public" complexity="7" crap="7" count="5"/>
+        <line num="18" type="stmt" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <metrics loc="44" ncloc="44" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="12" elements="14" coveredelements="14"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Modifier">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Modifier/ModifierRequest.php">
+        <class name="App\Http\Requests\Api\V1\Modifier\ModifierRequest" namespace="App\Http\Requests\Api\V1\Modifier">
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+        </class>
+        <line num="12" type="method" name="authorize" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="33" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="14" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\ModifierOption">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/ModifierOption/ModifierOptionRequest.php">
+        <class name="App\Http\Requests\Api\V1\ModifierOption\ModifierOptionRequest" namespace="App\Http\Requests\Api\V1\ModifierOption">
+          <metrics complexity="3" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
+        </class>
+        <line num="12" type="method" name="authorize" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="2" crap="6" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <metrics loc="33" ncloc="32" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="13" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Order">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Order/OrderRequest.php">
+        <class name="App\Http\Requests\Api\V1\Order\OrderRequest" namespace="App\Http\Requests\Api\V1\Order">
+          <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="79" coveredstatements="79" elements="82" coveredelements="82"/>
+        </class>
+        <line num="13" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="15" type="stmt" count="7"/>
+        <line num="18" type="method" name="rules" visibility="public" complexity="3" crap="3" count="7"/>
+        <line num="21" type="stmt" count="7"/>
+        <line num="22" type="stmt" count="7"/>
+        <line num="23" type="stmt" count="7"/>
+        <line num="25" type="stmt" count="7"/>
+        <line num="26" type="stmt" count="7"/>
+        <line num="27" type="stmt" count="7"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <line num="35" type="stmt" count="7"/>
+        <line num="36" type="stmt" count="7"/>
+        <line num="37" type="stmt" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <line num="39" type="stmt" count="7"/>
+        <line num="40" type="stmt" count="7"/>
+        <line num="41" type="stmt" count="7"/>
+        <line num="42" type="stmt" count="7"/>
+        <line num="43" type="stmt" count="7"/>
+        <line num="44" type="stmt" count="7"/>
+        <line num="45" type="stmt" count="7"/>
+        <line num="46" type="stmt" count="7"/>
+        <line num="47" type="stmt" count="7"/>
+        <line num="48" type="stmt" count="7"/>
+        <line num="49" type="stmt" count="7"/>
+        <line num="50" type="stmt" count="7"/>
+        <line num="51" type="stmt" count="7"/>
+        <line num="52" type="stmt" count="7"/>
+        <line num="53" type="stmt" count="7"/>
+        <line num="54" type="stmt" count="7"/>
+        <line num="55" type="stmt" count="7"/>
+        <line num="56" type="stmt" count="7"/>
+        <line num="59" type="stmt" count="7"/>
+        <line num="60" type="stmt" count="7"/>
+        <line num="61" type="stmt" count="7"/>
+        <line num="62" type="stmt" count="7"/>
+        <line num="63" type="stmt" count="7"/>
+        <line num="64" type="stmt" count="7"/>
+        <line num="65" type="stmt" count="7"/>
+        <line num="66" type="stmt" count="7"/>
+        <line num="67" type="stmt" count="7"/>
+        <line num="68" type="stmt" count="7"/>
+        <line num="69" type="stmt" count="7"/>
+        <line num="72" type="stmt" count="7"/>
+        <line num="73" type="stmt" count="7"/>
+        <line num="74" type="stmt" count="7"/>
+        <line num="75" type="stmt" count="7"/>
+        <line num="76" type="stmt" count="7"/>
+        <line num="77" type="stmt" count="7"/>
+        <line num="78" type="stmt" count="7"/>
+        <line num="79" type="stmt" count="7"/>
+        <line num="81" type="stmt" count="7"/>
+        <line num="83" type="stmt" count="3"/>
+        <line num="84" type="stmt" count="3"/>
+        <line num="85" type="stmt" count="3"/>
+        <line num="86" type="stmt" count="3"/>
+        <line num="87" type="stmt" count="3"/>
+        <line num="88" type="stmt" count="3"/>
+        <line num="89" type="stmt" count="3"/>
+        <line num="90" type="stmt" count="3"/>
+        <line num="91" type="stmt" count="3"/>
+        <line num="92" type="stmt" count="3"/>
+        <line num="93" type="stmt" count="3"/>
+        <line num="96" type="stmt" count="7"/>
+        <line num="99" type="method" name="messages" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="101" type="stmt" count="7"/>
+        <line num="102" type="stmt" count="7"/>
+        <line num="103" type="stmt" count="7"/>
+        <line num="104" type="stmt" count="7"/>
+        <line num="105" type="stmt" count="7"/>
+        <line num="106" type="stmt" count="7"/>
+        <line num="107" type="stmt" count="7"/>
+        <line num="108" type="stmt" count="7"/>
+        <line num="109" type="stmt" count="7"/>
+        <line num="110" type="stmt" count="7"/>
+        <line num="111" type="stmt" count="7"/>
+        <metrics loc="114" ncloc="110" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="79" coveredstatements="79" elements="82" coveredelements="82"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Product">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Product/ProductRequest.php">
+        <class name="App\Http\Requests\Api\V1\Product\ProductRequest" namespace="App\Http\Requests\Api\V1\Product">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="29" coveredelements="29"/>
+        </class>
+        <line num="13" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <line num="18" type="method" name="rules" visibility="public" complexity="4" crap="4" count="6"/>
+        <line num="21" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="30" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="6"/>
+        <line num="32" type="stmt" count="6"/>
+        <line num="35" type="stmt" count="6"/>
+        <line num="36" type="stmt" count="6"/>
+        <line num="37" type="stmt" count="6"/>
+        <line num="38" type="stmt" count="6"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="40" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="6"/>
+        <line num="43" type="stmt" count="6"/>
+        <line num="44" type="stmt" count="6"/>
+        <line num="47" type="stmt" count="6"/>
+        <line num="48" type="stmt" count="6"/>
+        <line num="49" type="stmt" count="6"/>
+        <line num="50" type="stmt" count="6"/>
+        <line num="51" type="stmt" count="6"/>
+        <metrics loc="54" ncloc="53" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="29" coveredelements="29"/>
+      </file>
+    </package>
+    <package name="App\Http\Requests\Api\V1\Restaurant">
+      <file name="/var/www/html/cardapio-api/app/Http/Requests/Api/V1/Restaurant/RestaurantRequest.php">
+        <class name="App\Http\Requests\Api\V1\Restaurant\RestaurantRequest" namespace="App\Http\Requests\Api\V1\Restaurant">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+        </class>
+        <line num="12" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="14" type="stmt" count="5"/>
+        <line num="17" type="method" name="rules" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="37" type="stmt" count="5"/>
+        <line num="38" type="stmt" count="5"/>
+        <line num="39" type="stmt" count="5"/>
+        <line num="40" type="stmt" count="5"/>
+        <line num="41" type="stmt" count="5"/>
+        <metrics loc="44" ncloc="44" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="23" coveredelements="23"/>
+      </file>
+    </package>
+    <package name="App\Models">
+      <file name="/var/www/html/cardapio-api/app/Models/Category.php">
+        <class name="App\Models\Category" namespace="App\Models">
+          <metrics complexity="4" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="4" elements="11" coveredelements="5"/>
+        </class>
+        <line num="26" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="39"/>
+        <line num="28" type="stmt" count="39"/>
+        <line num="29" type="stmt" count="39"/>
+        <line num="30" type="stmt" count="39"/>
+        <line num="31" type="stmt" count="39"/>
+        <line num="34" type="method" name="scopeActive" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="method" name="restaurant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="44" type="method" name="products" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <metrics loc="49" ncloc="48" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="4" elements="11" coveredelements="5"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/Client.php">
+        <class name="App\Models\Client" namespace="App\Models">
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+        </class>
+        <line num="24" type="method" name="restaurant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <metrics loc="29" ncloc="29" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/Order.php">
+        <class name="App\Models\Order" namespace="App\Models">
+          <metrics complexity="7" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="9" elements="21" coveredelements="11"/>
+        </class>
+        <line num="32" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="11"/>
+        <line num="34" type="stmt" count="11"/>
+        <line num="35" type="stmt" count="11"/>
+        <line num="36" type="stmt" count="11"/>
+        <line num="37" type="stmt" count="11"/>
+        <line num="38" type="stmt" count="11"/>
+        <line num="39" type="stmt" count="11"/>
+        <line num="40" type="stmt" count="11"/>
+        <line num="41" type="stmt" count="11"/>
+        <line num="44" type="method" name="scopeActive" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="49" type="method" name="scopeByStatus" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="54" type="method" name="restaurant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <line num="59" type="method" name="client" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="64" type="method" name="user" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="69" type="method" name="items" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="71" type="stmt" count="5"/>
+        <metrics loc="74" ncloc="73" classes="1" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="9" elements="21" coveredelements="11"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/OrderItem.php">
+        <class name="App\Models\OrderItem" namespace="App\Models">
+          <metrics complexity="4" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="12" coveredelements="8"/>
+        </class>
+        <line num="25" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="5"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="5"/>
+        <line num="29" type="stmt" count="5"/>
+        <line num="30" type="stmt" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="34" type="method" name="order" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="39" type="method" name="product" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="44" type="method" name="modifiers" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <metrics loc="49" ncloc="48" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="12" coveredelements="8"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/OrderItemModifier.php">
+        <class name="App\Models\OrderItemModifier" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="8" coveredelements="4"/>
+        </class>
+        <line num="21" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <line num="28" type="method" name="orderItem" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="33" type="method" name="modifierOption" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <metrics loc="38" ncloc="37" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="8" coveredelements="4"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/Product.php">
+        <class name="App\Models\Product" namespace="App\Models">
+          <metrics complexity="4" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="7" elements="13" coveredelements="9"/>
+        </class>
+        <line num="29" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="25"/>
+        <line num="31" type="stmt" count="25"/>
+        <line num="32" type="stmt" count="25"/>
+        <line num="33" type="stmt" count="25"/>
+        <line num="34" type="stmt" count="25"/>
+        <line num="35" type="stmt" count="25"/>
+        <line num="36" type="stmt" count="25"/>
+        <line num="39" type="method" name="scopeActive" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="44" type="method" name="restaurant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="49" type="method" name="category" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="51" type="stmt" count="5"/>
+        <metrics loc="54" ncloc="53" classes="1" methods="4" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="7" elements="13" coveredelements="9"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/Restaurant.php">
+        <class name="App\Models\Restaurant" namespace="App\Models">
+          <metrics complexity="6" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="14" coveredelements="10"/>
+        </class>
+        <line num="26" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="64"/>
+        <line num="28" type="stmt" count="64"/>
+        <line num="29" type="stmt" count="64"/>
+        <line num="30" type="stmt" count="64"/>
+        <line num="33" type="method" name="tenant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="38" type="method" name="clients" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="43" type="method" name="categories" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="48" type="method" name="products" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="50" type="stmt" count="2"/>
+        <line num="53" type="method" name="orders" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="55" type="stmt" count="2"/>
+        <metrics loc="58" ncloc="57" classes="1" methods="6" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="6" elements="14" coveredelements="10"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/Tenant.php">
+        <class name="App\Models\Tenant" namespace="App\Models">
+          <metrics complexity="3" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="8" coveredelements="4"/>
+        </class>
+        <line num="21" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="79"/>
+        <line num="23" type="stmt" count="79"/>
+        <line num="24" type="stmt" count="79"/>
+        <line num="25" type="stmt" count="79"/>
+        <line num="28" type="method" name="users" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="33" type="method" name="restaurants" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <metrics loc="38" ncloc="37" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="3" elements="8" coveredelements="4"/>
+      </file>
+      <file name="/var/www/html/cardapio-api/app/Models/User.php">
+        <class name="App\Models\User" namespace="App\Models">
+          <metrics complexity="2" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="7" coveredelements="5"/>
+        </class>
+        <line num="23" type="method" name="casts" visibility="protected" complexity="1" crap="1" count="80"/>
+        <line num="25" type="stmt" count="80"/>
+        <line num="26" type="stmt" count="80"/>
+        <line num="27" type="stmt" count="80"/>
+        <line num="28" type="stmt" count="80"/>
+        <line num="31" type="method" name="tenant" visibility="public" complexity="1" crap="2" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <metrics loc="36" ncloc="35" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="4" elements="7" coveredelements="5"/>
+      </file>
+    </package>
+    <package name="App\Providers">
+      <file name="/var/www/html/cardapio-api/app/Providers/AppServiceProvider.php">
+        <class name="App\Providers\AppServiceProvider" namespace="App\Providers">
+          <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+        </class>
+        <line num="12" type="method" name="register" visibility="public" complexity="1" crap="1" count="86"/>
+        <line num="15" type="stmt" count="86"/>
+        <line num="20" type="method" name="boot" visibility="public" complexity="1" crap="1" count="86"/>
+        <line num="23" type="stmt" count="86"/>
+        <metrics loc="25" ncloc="17" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
+      </file>
+    </package>
+    <metrics files="29" loc="1593" ncloc="1480" classes="28" methods="90" coveredmethods="59" conditionals="0" coveredconditionals="0" statements="548" coveredstatements="476" elements="638" coveredelements="535"/>
+  </project>
+</coverage>
