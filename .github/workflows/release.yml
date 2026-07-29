@@ -1,0 +1,44 @@
+name: Release CI
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'   # Se activa al hacer push de un tag como v0.0.1
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: pdo_mysql, bcmath
+          coverage: xdebug
+
+      - name: Instalar dependencias
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      - name: Preparar entorno
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Migrar base de datos
+        run: php artisan migrate --force
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ":memory:"
+
+      - name: Ejecutar pruebas con cobertura
+        run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
+
+      - name: Publicar cobertura en Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage.xml
+          fail_ci_if_error: true
