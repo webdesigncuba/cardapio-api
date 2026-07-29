@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout código
-        uses: actions/checkout@f548e57c1a9d3c42e12cd22362661c4e8d430763 # SHA v4.1.0
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d5d5ecf9f5e4d8a0 # v4.1.7
 
       - name: Generar changelog
         id: changelog
