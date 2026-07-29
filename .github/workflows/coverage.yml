@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout código
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d5d5ecf9f5e4d8a0 # v4.1.7
+        uses: actions/checkout@v7
 
       - name: Configurar PHP
-        uses: shivammathur/setup-php@e6d6a2f9b6c3c7f5c9a1f0d8a7b2c3d4e5f6a7b8 # v2.30.0
+        uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.3'
           coverage: xdebug
 
       - name: Instalar dependencias
