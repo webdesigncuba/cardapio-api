@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout código
-        uses: actions/checkout@v4
+        uses: actions/checkout@f548e57c1a9d3c42e12cd22362661c4e8d430763
 
       - name: Configurar PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@b9ef680c1234567890abcdef1234567890abcdef
         with:
           php-version: '8.2'
           extensions: pdo_mysql, bcmath
@@ -38,7 +38,7 @@ jobs:
         run: ./vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - name: Publicar cobertura en Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@fb8b358c1234567890abcdef1234567890abcdef
         with:
           files: coverage.xml
           fail_ci_if_error: true
