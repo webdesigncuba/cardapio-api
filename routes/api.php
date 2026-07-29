@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\V1\Auth\LogoutController;
 use App\Http\Controllers\Api\V1\Auth\RegisterController;
 use App\Http\Controllers\Api\V1\Categories\CategoryController;
 use App\Http\Controllers\Api\V1\Clients\ClientController;
+use App\Http\Controllers\Api\V1\Order\OrderController;
 use App\Http\Controllers\Api\V1\Products\ProductController;
 use App\Http\Controllers\Api\V1\Restaurants\RestaurantController;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,8 @@ Route::prefix('v1')->group(function () {
         ->middleware('auth:sanctum');
 
     Route::apiResource('restaurants.products', ProductController::class)
+        ->middleware('auth:sanctum');
+
+    Route::apiResource('restaurants.orders', OrderController::class)
         ->middleware('auth:sanctum');
 });

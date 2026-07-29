@@ -41,7 +41,9 @@ class RegisterController extends Controller
                 'slug' => $slug,
             ]);
 
-            return compact('user', 'tenant', 'restaurant');
+            $token = $user->createToken('auth-token')->plainTextToken;
+
+            return compact('user', 'tenant', 'restaurant', 'token');
         });
 
         return response()->json([
@@ -61,6 +63,7 @@ class RegisterController extends Controller
                     'id' => $result['tenant']->id,
                     'name' => $result['tenant']->name,
                 ],
+                'token' => $result['token'],
             ],
             'message' => 'Registro exitoso. Bienvenido a Cardapio.',
         ], 201);
