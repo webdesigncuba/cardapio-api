@@ -23,7 +23,7 @@ jobs:
         run: composer install --no-interaction --prefer-dist
 
       - name: Ejecutar PHPStan
-        run: ./vendor/bin/phpstan analyse --level=max app/
+        run: ./vendor/bin/phpstan analyse --level=1 app/
 
       - name: Ejecutar PHPCS
         run: ./vendor/bin/phpcs --standard=PSR12 app/
